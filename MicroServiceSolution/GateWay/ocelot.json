@@ -1,0 +1,33 @@
+{
+  "ReRoutes": [
+    //Item
+    {
+      "DownstreamPathTemplate": "/api/Item/{catchAll}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 55946
+        }
+      ],
+      "UpstreamPathTemplate": "/Item/{catchAll}"
+
+    },
+    // Order
+    {
+      "DownstreamPathTemplate": "/api/Order/{catchAll}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51052
+        }
+      ],
+      "UpstreamPathTemplate": "/Order/{catchAll}"
+
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:51859"
+  }
+}
